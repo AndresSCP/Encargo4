@@ -3,14 +3,20 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'menuprincipal_wiki.html')
 
+def forowiki(request):
+    return render(request, 'usuarios/forowiki.html')
+
 def login(request):
-    return render(request, 'inicio_sesion_wiki.html')
+    return render(request, 'usuarios/inicio_sesion_wiki.html')
 
 def registro(request):
-    return render(request, 'registrarse_wiki.html')
+    return render(request, 'usuarios/registrarse_wiki.html')
 
 def cuenta(request):
-    return render(request, 'micuentatf.html')
+    return render(request, 'usuarios/micuentatf.html')
+
+def recuperar(request):
+    return render(request,'usuarios/recuperarcontra.html')
 
 def animales(request):
     return render(request, 'categorias/Animales.html')
@@ -30,9 +36,6 @@ def enemigos(request):
 def flora(request):
     return render(request, 'categorias/Flora.html')
 
-def foro(request):
-    return render(request, 'forowiki.html')
-
 def historia(request):
     return render(request, 'categorias/historia.html')
 
@@ -42,8 +45,7 @@ def logros(request):
 def lugares(request):
     return render(request, 'categorias/Lugarestf.html')
 
-def recuperar(request):
-    return render(request,'recuperarcontra.html')
+
 
 
 
