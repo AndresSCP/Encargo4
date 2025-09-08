@@ -22,19 +22,19 @@ from core.views import index, forowiki, login, registro, cuenta, recuperar, anim
 urlpatterns = [
     path("", index, name="menuprincipal"),
 
-    path("usuarios/", forowiki, name="forowiki"),
-    path("usuarios/", login),
-    path("usuarios/", registro),
-    path("usuarios/", cuenta),
-    path("usuarios/", recuperar),
-    
-    path("categorias/", animales, name="animales"),
-    path("categorias/", armas, name="armas"),
-    path("categorias/", construcciones, name="construcciones"),
-    path("categorias/", consumibles),
-    path("categorias/", enemigos),
-    path("categorias/", flora),
-    path("categorias/", historia),  
-    path("categorias/", logros),
-    path("categorias/", lugares)
+    path("usuarios/foro/", forowiki, name="forowiki"),
+    path("usuarios/login/", login, name="login"),
+    path("usuarios/registro/", registro, name="registrarse_wiki"),
+    path("usuarios/cuenta/", cuenta, name="cuenta"),
+    path("usuarios/recuperar/", recuperar, name="recuperar"),
+
+    path("categorias/animales/", animales, name="animales"),
+    path("categorias/armas/", armas, name="armas"),
+    path("categorias/construcciones/", construcciones, name="construcciones"),
+    path("categorias/consumibles/", consumibles, name="consumibles"),
+    path("categorias/enemigos/", enemigos, name="enemigos"),
+    path("categorias/flora/", flora, name="flora"),
+    path("categorias/historia/", historia, name="historia"),  
+    path("categorias/logros/", logros, name="logros"),
+    path("categorias/lugares/", lugares, name="lugares"),
 ]
