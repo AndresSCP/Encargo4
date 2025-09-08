@@ -17,9 +17,24 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from core.views import index
+from core.views import index, forowiki, login, registro, cuenta, recuperar, animales, armas, construcciones, consumibles, enemigos, flora, historia, logros, lugares
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
-    path("", index)
+    path("", index, name="menuprincipal"),
+
+    path("usuarios/", forowiki, name="forowiki"),
+    path("usuarios/", login),
+    path("usuarios/", registro),
+    path("usuarios/", cuenta),
+    path("usuarios/", recuperar),
+    
+    path("categorias/", animales, name="animales"),
+    path("categorias/", armas, name="armas"),
+    path("categorias/", construcciones, name="construcciones"),
+    path("categorias/", consumibles),
+    path("categorias/", enemigos),
+    path("categorias/", flora),
+    path("categorias/", historia),  
+    path("categorias/", logros),
+    path("categorias/", lugares)
 ]
