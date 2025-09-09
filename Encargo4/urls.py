@@ -24,8 +24,8 @@ urlpatterns = [
 
     path("usuarios/foro/", forowiki, name="forowiki"),
     path("usuarios/login/", login, name="login"),
-    path("usuarios/registro/", registro, name="registrarse_wiki"),
-    path("usuarios/cuenta/", cuenta, name="cuenta"),
+    path("usuarios/registro/", registro, name="registrarse"),
+    path("usuarios/cuenta/", cuenta, name="micuenta"),
     path("usuarios/recuperar/", recuperar, name="recuperar"),
 
     path("categorias/animales/", animales, name="animales"),

@@ -10,7 +10,7 @@ def login(request):
     return render(request, 'usuarios/inicio_sesion_wiki.html')
 
 def registro(request):
-    return render(request, 'usuarios/registrarse_wiki.html')
+    return render(request, 'usuarios/registrase_wiki.html')
 
 def cuenta(request):
     return render(request, 'usuarios/micuentatf.html')
