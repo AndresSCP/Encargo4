@@ -84,21 +84,34 @@
                 </div>
                 <div class="align-self-center w-100 px-lg-5 py-lg-4 p-4">
                 <h1 class="font-weight-bold mb-4" id="subir">Bienvenido Ingresa tu Usuario</h1>
-                <form class="mb-5">
-                    <div class="mb-4">
-                      <label for="exampleInputEmail1" class="form-label font-weight-bold">Email</label>
-                      <input type="email" class="form-control bg-dark-x border-0" id="exampleInputEmail1" placeholder="I" aria-describedby="emailHelp" style="background-color: #ffffff;">
+                <form class="mb-5" method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    
+                    {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error }}
                     </div>
-                    <div class="mb-4">
-                      <label for="exampleInputPassword1" class="form-label font-weight-bold">Contraseña</label>
-                      <input type="password" value="FakePSW" id="myInput" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu contraseña" id="exampleInputPassword1" 
-                      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required style="background-color: #ffffff;">
-                      <input type="checkbox" onclick="myFunction()"> Mostrar Contraseña
-                      <a href="recuperarcontra.html" id="emailHelp" class="form-text text-muted text-decoration-none">  ¿Has olvidado tu contraseña?</a>                     
-                    </div>
-                    <a href="{% url 'menuprincipal' %}" class="button">Iniciar sesion</a>
+                    {% endif %}
 
-                  </form>
+                    <div class="mb-4">
+                        <label for="exampleInputUsername1" class="form-label font-weight-bold">Usuario</label>
+                        <input type="text" name="username" class="form-control bg-dark-x border-0" id="exampleInputUsername1" placeholder="Ingresa tu usuario" style="background-color: #ffffff;">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="exampleInputPassword1" class="form-label font-weight-bold">Contraseña</label>
+                        <input type="password" name="password" id="myInput" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu contraseña" 
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" 
+                            required style="background-color: #ffffff;">
+                        <input type="checkbox" onclick="myFunction()"> Mostrar Contraseña
+                        <a href="recuperarcontra.html" id="emailHelp" class="form-text text-muted text-decoration-none">¿Has olvidado tu contraseña?</a>                     
+                    </div>
+
+                    <button type="submit" class="button">Iniciar sesión</button>
+</form>
+
+
 
 
                 </div>
