@@ -1,5 +1,5 @@
 """
-URL configuration for Encargo4 project.
+URL configuration for Encargo5 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -20,6 +20,7 @@ from django.urls import path
 from core.views import index, forowiki, login, registro, cuenta, recuperar, animales, armas, construcciones, consumibles, enemigos, flora, historia, logros, lugares
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path("", index, name="menuprincipal"),
 
     path("usuarios/foro/", forowiki, name="forowiki"),
